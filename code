@@ -1,8 +1,14 @@
+https://codefile.io/f/ZoxxOIIruR
+
+
+
+
 from tkinter import*
 import mysql.connector
 import tkinter.messagebox as tm
 from tkinter import ttk
-#First Create the Database after run this program#
+import PIL
+###create it bruh
 '''Create Database name as logindetails'''
 '''Create Table name as userdatas'''
 '''Create 6 Columns'''
@@ -13,8 +19,12 @@ from tkinter import ttk
 4. Moviename
 5. seatname
 6. Amount
+all shud be in varchar and this size of varchar is 255 dude kindly enter that and create a table _=_
+-+-
 '''
 
+##Screen Size####Screen Size##
+##Screen Size##
 ##Screen Size##
 def scrsize(x):
     
@@ -41,7 +51,6 @@ def button_style2():
     return{'font': ('Arial', 10, 'bold'), 'bd': 2, 'width': 14, 'height': 1,
                     'activebackground': 'yellow', 'activeforeground': 'black',
                     'fg': 'black', 'bg': 'darkviolet', 'relief': 'groove',}
-
 ##Label Styles##
 def labeltext():
      label_font=('Gill Sans', 20, 'bold')
@@ -136,7 +145,7 @@ def signed():
         z=mysql.connector.connect(
             host='localhost',
             user='root',
-            passwd='',
+            passwd='Rakshan@8',
             database='logindetails'
             )
 
@@ -234,7 +243,7 @@ def submit():
         z1=mysql.connector.connect(
             host='localhost',
             user='root',
-            passwd='',
+            passwd='Rakshan@8',
             database='logindetails'
             )
 
@@ -278,8 +287,7 @@ def selectcity():
     label.pack()
 
     cities = ["Madurai", "Chennai", "Thirunelveli","Coimbatore","Salem","Tiruchirappalli",
-              "Nagercoil","Thanjavur","Pallavaram","Erode","Dindigul","Ooty","Kodaikanal",
-              "Kanchipuram","Puducherry","Rameswaram","Vellore","Pudukkottai","Tenkasi"]
+              "Nagercoil","Thanjavur","Pallavaram","Erode"]
 
     global sc
     sc = StringVar()
@@ -322,13 +330,13 @@ def signout(city):
     
 def movies_list(city):
 
-    btn1=Button(city,text='Movie 1', **button_style1(),command=lambda: seat_selection(city,"Movie 1"))
+    btn1=Button(city,text='G.O.A.T', **button_style1(),command=lambda: seat_selection(city,"Movie 1"))
     btn1.pack(side=LEFT, padx=15, pady=10, anchor=CENTER)
 
-    btn2=Button(city,text='Movie 2', **button_style1(),command=lambda: seat_selection(city,"Movie 2"))
+    btn2=Button(city,text='Vidaamuyarchi', **button_style1(),command=lambda: seat_selection(city,"Movie 2"))
     btn2.pack(side=LEFT, padx=15, pady=10, anchor=CENTER)
     
-    btn3=Button(city,text='Movie 3', **button_style1(),command=lambda: seat_selection(city,"Movie 3"))
+    btn3=Button(city,text='Vikram', **button_style1(),command=lambda: seat_selection(city,"Movie 3"))
     btn3.pack(side=LEFT, padx=15, pady=10, anchor=CENTER)
 
 def seat_selection(city,movie_name_fetch):
@@ -1113,7 +1121,7 @@ def updating_values(seat):
     z=mysql.connector.connect(
             host='localhost',
             user='root',
-            passwd='',
+            passwd='Rakshan@8',
             database='logindetails'
             )
 
